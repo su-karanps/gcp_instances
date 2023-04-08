@@ -1,6 +1,6 @@
 # Google Cloud Platform (GCP) Instances
 
-This guide is meant to provide a concise resource for those doing machine learning or simulation work on GCP Compute Engine Instances. It also includes random Linux commands and tips/tricks that may come in handy.
+This guide is meant to provide a concise resource for those doing machine learning or simulation work on GCP Compute Engine Instances. It also includes random Linux commands and tips/tricks that may come in handy. I must credit the [Stanford CS231n Google Cloud Tutorial Repository](https://github.com/cs231n/gcloud), which has helped me countless times with my instances. 
 
 (Last Updated on April 8, 2023)
 
@@ -14,12 +14,16 @@ This guide is meant to provide a concise resource for those doing machine learni
 
 This guide assumes you have a [Google Cloud account](https://cloud.google.com/) with a sufficient GPU quota (once you have [upgraded your account](https://cloud.google.com/free/docs/free-cloud-features#how-to-upgrade), go to IAM Admin -> Quotas) 
 
-*Image*: keep the default, GPU-optimized Debian 10 with CUDA 11.0 can be tricky
+**Image**: keep the default Debian image. I found the 'GPU-optimized Debian 10 with CUDA 11.0' to be more tricky than helpful, unfortunately.
+
+First, install your NVIDIA drivers and CUDA using this [handy script](https://cloud.google.com/compute/docs/gpus/install-drivers-gpu) from GCP.
 
 ```bash
 curl https://raw.githubusercontent.com/GoogleCloudPlatform/compute-gpu-installation/main/linux/install_gpu_driver.py --output install_gpu_driver.py
 sudo python3 install_gpu_driver.py
 ```
+
+Next, install pip so you can 
 
 ```bash
 sudo apt install python3-pip
@@ -56,4 +60,4 @@ c.NotebookApp.open_browser = False
 python3 -m jupyter_server.auth password
 ```
 
-You can now run Jupyter using '''jupyter notebook''' or, for the bold, '''jupyter-lab'''.
+You can now run Jupyter using `jupyter notebook` or, for the bold, `jupyter-lab`.
