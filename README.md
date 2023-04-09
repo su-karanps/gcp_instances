@@ -1,6 +1,6 @@
 # Google Cloud Platform (GCP) Instances
 
-This guide is meant to provide a concise resource for those doing machine learning (using PyTorch) or simulation work (in MATLAB) on GCP Compute Engine Instances. It also includes random Linux commands and tips/tricks that may come in handy. I must credit the [Stanford CS231n Google Cloud Tutorial Repository](https://github.com/cs231n/gcloud), which has helped me countless times with my instances. 
+This guide is meant to provide a concise resource for those doing machine learning (using PyTorch) or simulation work (in MATLAB) on GCP Compute Engine Instances. It also includes random Linux commands and tips/tricks that may come in handy. I must credit the [Stanford CS231n Tutorial Repository](https://github.com/cs231n/gcloud) for some of these links and instructions, which have helped me countless times with my own projects. 
 
 (Last Updated on April 8, 2023)
 
