@@ -34,6 +34,7 @@ And add them to your path:
 
 ```bash
 nano ~/.bashrc
+# Add the following to the top of the file
 export PATH=$PATH:~/.local/bin
 ```
 
