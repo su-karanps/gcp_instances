@@ -9,9 +9,9 @@ This guide is meant to provide a concise resource for those doing machine learni
 1. [Setting Up a New Instance](#setting-up-a-new-instance)
 2. [Using GCP for MATLAB](#using-gcp-for-matlab)
 3. [Tips and Tricks](#tips-and-tricks)
-  - [SCP Between Instances](#scp-between-instances)
-  - [Create a Shared Directory](#create-a-shared-directory)
-  - [Random Commands](#random-commands)
+   - [SCP Between Instances](#scp-between-instances)
+   - [Create a Shared Directory](#create-a-shared-directory)
+   - [Random Commands](#random-commands)
 
 # Setting Up a New Instance
 
