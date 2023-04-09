@@ -11,7 +11,7 @@ This guide is meant to provide a concise resource for those doing machine learni
 3. [Tips and Tricks](#tips-and-tricks)
    - [SCP Between Instances](#scp-between-instances)
    - [Create a Shared Directory](#create-a-shared-directory)
-   - [Random Commands](#random-commands)
+   - [Large Directories](#large-directories)
 
 # Setting Up a New Instance
 
@@ -126,7 +126,7 @@ sudo adduser userN mygroup
 # restart your SSH session
 ```
 
-### Random Commands
+### Large Directories
 
 Print the number of files in the current directory using `ls | wc -l`, or `ls ~/directory/ | wc -l` for a different directory.
 
