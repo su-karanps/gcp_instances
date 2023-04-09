@@ -23,14 +23,14 @@ curl https://raw.githubusercontent.com/GoogleCloudPlatform/compute-gpu-installat
 sudo python3 install_gpu_driver.py
 ```
 
-Next, install `pip`...
+Next, install `pip` and all the libraries you need...
 
 ```bash
 sudo apt install python3-pip
 pip3 install jupyter jupyterlab mat73 scipy numpy torch matplotlib tqdm pillow natsort
 ```
 
-And add it to your path:
+And add them to your path:
 
 ```bash
 nano ~/.bashrc
