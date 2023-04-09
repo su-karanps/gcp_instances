@@ -78,11 +78,50 @@ Then, copy the installation to the instance:
 gcloud compute scp --recurse ~/Downloads/MathWorks/ [username]@[instance]:~/
 ```
 
-Pro Tip: if you're running a cluster of instances for MATLAB like a madman, there's a very easy way to `scp` between instances [here](#scp-between-instances).
+Pro Tip: if you're running many instances for say, parallelized GPU-accelerated MATLAB, there's a very easy way to `scp` between instances [here](#scp-between-instances).
 
+Generate a license for your MATLAB install. Go to your MATLAB Account -> Click on Your License -> Install and Activate -> Activate to Retrieve License File -> Activate a Computer. You will need your username (`whoami`) and Host ID (`ip addr | grep ether`).
+
+Next, navigate into your MATLAB Installation and copy the `installer_input.txt` file. Fill it out with your destination folder (I use `/opt/MATLAB/R2023a/`), installation key that you just got from MATLAB, and license path (I `scp` this to `/tmp/license.dat`). 
+
+Finally, you can install MATLAB using the following:
+
+```bash
+sudo mkdir /opt/MATLAB
+sudo apt install libxt6 
+cd MathWorks/R2023a/[date]/
+sudo ./install -inputfile ~/installer_input.txt
+```
+
+To open MATLAB, simply run `/opt/MATLAB/bin/matlab`. As there is no GUI here, I recommend developing/testing your script locally and only running it on the instance when you're finished. 
 
 # Tips and Tricks
 
 ### SCP Between Instances
 
 Simply run `gcloud auth login` and you'll be able to `scp` between instances on the same account. If others use the instance, you may want to run `gcloud auth revoke` afterwards to protect your credentials.
+
+If you're working between different zones, you can use `gcloud config set compute/zone us-west1-b` to change your current zone when using secure copy (scp).
+
+### Create Shared Directory
+
+```bash
+sudo mkdir /home/shared
+sudo groupadd mygroup
+sudo chgrp mygroup /home/shared
+sudo chmod 775 -R /home/shared
+sudo chmod +s /home/shared
+
+sudo adduser user1 mygroup
+...
+sudo adduser userN mygroup
+
+# restart your SSH session
+```
+
+### Random Commands
+
+Print the number of files in the current directory using `ls | wc -l`, or `ls ~/directory/ | wc -l` for a different directory.
+
+Print the file name of the last file in a directory (natural sorted) using `ls -v ~/directory/ | tail -n 1`
+
