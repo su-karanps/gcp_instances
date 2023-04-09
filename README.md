@@ -34,8 +34,11 @@ And add them to your path:
 
 ```bash
 nano ~/.bashrc
-# Add the following to the top of the file
+
+# add the following to the top of the file:
 export PATH=$PATH:~/.local/bin
+
+# restart your SSH session
 ```
 
 Now we can configure Jupyter.
