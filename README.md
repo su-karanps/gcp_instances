@@ -9,6 +9,9 @@ This guide is meant to provide a concise resource for those doing machine learni
 1. [Setting Up a New Instance](#setting-up-a-new-instance)
 2. [Using GCP for MATLAB](#using-gcp-for-matlab)
 3. [Tips and Tricks](#tips-and-tricks)
+  1. [SCP Between Instances](#scp-between-instances)
+  2. [Create a Shared Directory](#create-a-shared-directory)
+  3. [Random Commands](#random-commands)
 
 # Setting Up a New Instance
 
@@ -107,7 +110,7 @@ Simply run `gcloud auth login` and you'll be able to `scp` between instances on 
 
 If you're working between different zones, you can use `gcloud config set compute/zone us-west1-b` to change your current zone when using secure copy (scp).
 
-### Create Shared Directory
+### Create a Shared Directory
 
 ```bash
 sudo mkdir /home/shared
