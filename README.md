@@ -134,4 +134,4 @@ Print the file name of the last file in a directory (natural sorted) using `ls -
 
 ### Python or Pip Issues?
 
-Try `which python` and `echo $PATH` to see where your install is located or being sourced. Also try `nano ~/.bashrc` and `nano ~/.profile` to see if any package might be modifying the path.
+Try `which python` and `echo $PATH` to see where your install is located or being sourced. Also try `nano ~/.bashrc` and `nano ~/.profile` to see if any package (conda for instance) might be modifying the path.
