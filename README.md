@@ -132,3 +132,6 @@ Print the number of files in the current directory using `ls | wc -l`, or `ls ~/
 
 Print the file name of the last file in a directory (natural sorted) using `ls -v ~/directory/ | tail -n 1`
 
+### Python or Pip Issues?
+
+Try `which python` and `echo $PATH` to see where your install is located or being sourced. Also try `nano ~/.bashrc` and `nano ~/.profile` to see if any package might be modifying the path.
