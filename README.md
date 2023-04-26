@@ -77,7 +77,7 @@ You can now run Jupyter using `jupyter notebook` or, for the bold, `jupyter-lab`
 
 # Using GCP for MATLAB
 
-First, download the installer for your operating system and sign in. Select "Advanced Options" on the top-right and select "I want to download without installing."
+Python is better ;), but here's a guide to installing MATLAB on a GCP instance if your application necessitates it. First, download the installer for your operating system and sign in. Select "Advanced Options" on the top-right and select "I want to download without installing."
 
 Then, copy the installation to the instance:
 
