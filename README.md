@@ -26,6 +26,10 @@ curl https://raw.githubusercontent.com/GoogleCloudPlatform/compute-gpu-installat
 sudo python3 install_gpu_driver.py
 ```
 
+Driver issues? Run the following command:
+
+`sudo apt-get install linux-headers-`uname -r``
+
 Next, install `pip` and all the libraries you need...
 
 ```bash
