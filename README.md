@@ -51,10 +51,9 @@ jupyter notebook --generate-config
 nano ~/.jupyter/jupyter_notebook_config.py
 ```
 
-Add the following to the top of the file:
+Add the following to the top of the file, after `c = get_config()`:
 
 ```bash
-c = get_config()  #noqa
 
 c.NotebookApp.allow_origin = "*"
 
@@ -119,9 +118,9 @@ sudo chgrp mygroup /home/shared
 sudo chmod 775 -R /home/shared
 sudo chmod +s /home/shared
 
-sudo adduser user1 mygroup
+sudo usermod -a -G mygroup user1
 ...
-sudo adduser userN mygroup
+sudo usermod -a -G mygroup userN
 
 # restart your SSH session
 ```
