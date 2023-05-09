@@ -26,7 +26,7 @@ curl https://raw.githubusercontent.com/GoogleCloudPlatform/compute-gpu-installat
 sudo python3 install_gpu_driver.py
 ```
 
-If at any point you get `unable to find the kernel source tree for the currently running kernel`, run the following command and try `nvidia-smi` again.
+If at any point you get `unable to find the kernel source tree for the currently running kernel`, run the following command before trying `nvidia-smi` again:
 
 ```bash
 sudo apt-get install linux-headers-`uname -r`
