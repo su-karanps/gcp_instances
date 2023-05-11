@@ -12,6 +12,8 @@ This guide is meant to provide a concise resource for those doing machine learni
    - [SCP Between Instances](#scp-between-instances)
    - [Create a Shared Directory](#create-a-shared-directory)
    - [Large Directories](#large-directories)
+   - [Duplicate Instances](#duplicate-instances)
+   - [Python or Pip Issues?](#python-or-pip-issues)
 
 # Setting Up a New Instance
 
@@ -90,9 +92,11 @@ Then, copy the installation to the instance:
 gcloud compute scp --recurse ~/Downloads/MathWorks/ [username]@[instance]:~/
 ```
 
-Pro Tip: if you're running many instances for say, parallelized GPU-accelerated MATLAB, there's a very easy way to `scp` between instances [here](#scp-between-instances).
+Pro Tip: if you're running many instances for say, parallelized GPU-accelerated MATLAB, there's a very easy way to `scp` between instances [here](#scp-between-instances). 
 
 Generate a license for your MATLAB install. Go to your MATLAB Account -> Click on Your License -> Install and Activate -> Activate to Retrieve License File -> Activate a Computer. You will need your username (`whoami`) and Host ID (`ip addr | grep ether`).
+
+Another Tip: if you ever want to change the license on your existing install, all you have to do is move the new license to the `licenses` folder inside the install. For example, `sudo mv ~/license.lic /opt/MATLAB/licenses`.
 
 Next, navigate into your MATLAB Installation and copy the `installer_input.txt` file. Fill it out with your destination folder (I use `/opt/MATLAB/R2023a/`), installation key that you just got from MATLAB, and license path (I `scp` this to `/tmp/license.dat`). 
 
@@ -136,6 +140,10 @@ sudo usermod -a -G mygroup userN
 Print the number of files in the current directory using `ls | wc -l`, or `ls ~/directory/ | wc -l` for a different directory.
 
 Print the file name of the last file in a directory (natural sorted) using `ls -v ~/directory/ | tail -n 1`
+
+### Duplicate Instances
+
+If you're parallelizing a task and need to duplicate many Compute Platform instances, you can do by creating a snapshot of the instance and basing each new instance disk off of that snapshot. [This page](https://cloud.google.com/compute/docs/disks/create-snapshots) has more information about snapshots.
 
 ### Python or Pip Issues?
 
