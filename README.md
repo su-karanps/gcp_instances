@@ -147,4 +147,4 @@ If you're parallelizing a task and need to duplicate many Compute Platform insta
 
 ### Python or Pip Issues?
 
-Try `which python` and `echo $PATH` to see where your install is located or being sourced. Also try `nano ~/.bashrc` and `nano ~/.profile` to see if any package (conda for instance) might be modifying the path.
+Try `which python` and `echo $PATH` to see where your install is located or being sourced. Also take a look at your profile configurations with `nano ~/.bashrc` and `nano ~/.profile` to see if any package (conda for instance) might be modifying the path.
