@@ -148,3 +148,19 @@ If you're parallelizing a task and need to duplicate many Compute Platform insta
 ### Python or Pip Issues?
 
 Try `which python` and `echo $PATH` to see where your install is located or being sourced. Also take a look at your profile configurations with `nano ~/.bashrc` and `nano ~/.profile` to see if any package (conda for instance) might be modifying the path.
+
+<!-- 
+## Fancy Terminal Profiles (Mac)
+
+You can customize your terminal in many ways. Below is my (very simple) configuration, which I put in `.zshrc`. [Here](https://www.cyberciti.biz/faq/apple-mac-osx-terminal-color-ls-output-option/#:~:text=You%20can%20enable%20colorized%20output,colorized%20output%20on%20Unix%20box.) is a link that explains the terminal colors.
+
+```bash
+PROMPT='%(?.%F{green}√.%F{red}%?%f) %F{blue}%~ >%f '
+
+# Terminal Colors
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# Aliases
+alias ls="ls -a"
+``` -->
